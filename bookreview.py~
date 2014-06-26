@@ -35,7 +35,7 @@ reviewgr=[]
 for msg in bs.select(".readable"):
    i=i+1
    if i%2==0:
-      reviewgr.append(msg.text.strip())
+      reviewgr.append(msg.text)
 print reviewgr
 fliplink="http://www.flipkart.com/search?q="+st[:-1]
 bs = BeautifulSoup(urllib2.urlopen(fliplink).read(), "html.parser")
